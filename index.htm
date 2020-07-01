@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Git-Lab</title>
+</head>
+<body>
+
+<nav id="navbar">
+  <header>GIT BASICS</header>
+  <ul>
+    <li><a class="nav-link" href="#Configuration">Configuration</a></li>
+    <li><a class="nav-link" href="#Projects">Projects</a></li>
+    <li><a class="nav-link" href="#Remote">Remote</a></li>
+    <li><a class="nav-link" href="#Branches">Branches</a></li>
+    <li><a class="nav-link" href="#Sharing">Sharing</a></li>
+  <ul>
+</nav>
+
+<main id="main-doc">
+  <section class="main-section" id="Configuration">
+    <header>Configuration</header>
+    <ul>
+      <li><p><span class="code">git --version</span></p></li>
+      <li><p><span class="code">git --help</span></p></li>   
+      <li><p><span class="code">git config</span></p>
+        <code># shows full configuration<br>git config --list<br><br># shows user name<br>git config user.name</code>
+      </li>  
+    </ul>
+  </section>  
+  
+    <section class="main-section" id="Projects">
+      <header id="Projects">Projects</header>
+      <ul>
+        <li>
+          <p><span class="code">git init</span><br>Initialize new git repository</p>
+          <code># create a new directory and initialize it with git init function<br> git init my-new-repo</code>
+        </li>
+        <li>
+          <p><span class="code">git status</span><br>Shows the state of the working directory</p>          
+        </li>
+        <li>
+          <p><span class="code">git add</span><br>Stages a change</p>
+          <code># create first file and stage it<br>touch README.md<br>git add README.md</code>
+        </li>
+        <li>
+          <p><span class="code">git commit</span><br> Saves the snapshot to the project history</p>  
+          <code># take a snapshot of the stagin aera<br>git commit -m "add README to initial commit"</code>
+        </li>        
+      </ul>     
+  </section>
+  
+  <section class="main-section" id="Remote">
+      <header>Remote</header>   
+      <ul>
+        <li>
+          <p><span class="code">git remote</span><br> Shows the shortnames of each remote handle you've specified</p>  
+          <code># show the URLs for remotes<br>git remote -v </code>
+        </li>  
+        <li>
+          <p><span class="code">git remote add <shortname> <url></span><br>Adds the new remote repository</p>
+            <code># adds remote repo, commit and push files<br>git remote add origin git@gitlab.com:xxx/my-repo.git<br>git add .<br>git commit -m "Initial commit"<br>
+              git push -u origin master
+            </code>
+        </li>
+        <li>
+          <p><span class="code">git fetch <remote></span><br>Fetch all files from remote repo that don't exist in local repository</p>
+            <code>git fetch origin</code>
+        </li>
+        <li>
+          <p><span class="code">git pull</span><br>Fetch and merge</p>
+            <code>git pull</code>
+        </li>
+        <li>
+          <p><span class="code">git push <remote> <branch></span><br></p>
+            <code>git push origin master</code>
+        </li>
+      </ul>
+  </section>
+        
+    <section class="main-section" id="Branches">
+      <header id="Branches">Branches</header>
+      <ul> 
+        <li>
+          <p><span class="code">git branch</span><br> Shows the branches being worked on locally</p>  
+        </li>  
+      </ul>
+  </section>
+  
+</main>
+
+  
+</body>
+</html>
